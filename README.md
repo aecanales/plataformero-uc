@@ -18,20 +18,20 @@ Concept art para los ayudantes malvados y los profesores malvados. Como son dos 
 
 ### Diseño
 
-#### Diseño del primer nivel - 
+#### Diseño del primer nivel - @matthers3
 Hay que diseñar un nivel que enseñe lo básico al jugador, pero **sin tutorial!** [El mismo SMB hace esto.](https://www.youtube.com/watch?v=zRGRJRUWafY) Hay que tratar de introducir todos los elementos del juego
 
 ### Programación
 
-#### Movimiento del personaje - 
+#### Movimiento del personaje - @tatanpoker09
 El personaje debe poder moverse izquierda y derecha, saltar y caer. [Este tutorial de Unity](https://unity3d.com/learn/tutorials/topics/2d-game-creation/creating-basic-platformer-game) puede ser buena referencia
 
-#### Programación de los enemigos -
+#### Programación de los enemigos - @rexer
 Hay que programar el comportamiento de los dos enemigos:
 * Ayudantes malvados: Son como goombas, avanzan en un dirección y cambian cuando chocan con una pared. Si llegan a un precipicio, se tiran nomas. Se matan saltando encima de ellos.
 * Profesores malvados: Como los ayudantes pero un poco más pillos, son como los Koopa que cambian de dirección cuando llegan a un precipicio. Se matan de la misma manera.
 
-#### Programación de collectables -
+#### Programación de collectables - @FarDust
 Hay que programar los distintos items que uno puede coleccionar en el juego:
 * Monedas (añade a un contador)
 * Pizza (que por el momento no hace nada)
