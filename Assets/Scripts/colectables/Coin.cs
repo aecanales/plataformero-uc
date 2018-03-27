@@ -28,7 +28,7 @@ public class Coin : Colectable
     {
         if (collision.gameObject.CompareTag(triggerBy))
         {
-            collision.gameObject.SendMessage("getMoney", Amount);
+            collision.gameObject.SendMessage("AddMoney", Amount);
         }
         base.OnTriggerEnter2D(collision);
     }

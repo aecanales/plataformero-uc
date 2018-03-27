@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Cofe : Colectable {
+public class Coffee : Colectable {
 
     public int amount = 1;
 
-    public Cofe()
+    public Coffee()
     {
 
     }
