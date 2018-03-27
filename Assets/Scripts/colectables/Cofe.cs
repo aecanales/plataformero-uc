@@ -2,25 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+public class Cofe : Colectable {
 
-public class Coin : Colectable
-{
+    public int amount = 1;
 
-    public int Amount = 10;
-
-    public Coin()
+    public Cofe()
     {
 
     }
 
-    // Use this for initialization
-    protected override void Start () {
+    protected override void Start()
+    {
         base.Start();
 
-	}
-
-    // Update is called once per frame
-    protected override void Update () {
+    }
+    protected override void Update()
+    {
         base.Update();
 
     }
@@ -28,7 +25,7 @@ public class Coin : Colectable
     {
         if (collision.gameObject.CompareTag(triggerBy))
         {
-            collision.gameObject.SendMessage("getMoney", Amount);
+            collision.gameObject.SendMessage("lifeUp", amount);
         }
         base.OnTriggerEnter2D(collision);
     }

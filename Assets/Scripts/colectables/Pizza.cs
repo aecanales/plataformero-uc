@@ -2,25 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+public class Pizza : Colectable{ 
 
-public class Coin : Colectable
-{
 
-    public int Amount = 10;
-
-    public Coin()
+    public Pizza()
     {
 
     }
 
-    // Use this for initialization
-    protected override void Start () {
+    protected override void Start()
+    {
         base.Start();
 
-	}
-
-    // Update is called once per frame
-    protected override void Update () {
+    }
+    protected override void Update()
+    {
         base.Update();
 
     }
@@ -28,7 +24,7 @@ public class Coin : Colectable
     {
         if (collision.gameObject.CompareTag(triggerBy))
         {
-            collision.gameObject.SendMessage("getMoney", Amount);
+            // Do something
         }
         base.OnTriggerEnter2D(collision);
     }

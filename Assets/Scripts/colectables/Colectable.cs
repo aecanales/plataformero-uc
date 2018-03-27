@@ -19,7 +19,6 @@ public class Colectable : MonoBehaviour {
     // Update is called once per frame
     protected virtual void Update() {
         yMovement.y += maxRange / 2 * Mathf.Sin(velocidad*Time.time);
-        Debug.Log(yMovement);
     }
 
     protected virtual void FixedUpdate()
@@ -29,6 +28,7 @@ public class Colectable : MonoBehaviour {
 
     protected virtual void OnTriggerEnter2D(Collider2D collision)
     {
+        Debug.Log("collision");
         if (collision.gameObject.CompareTag(triggerBy)) {
             Destroy(gameObject);
         }
