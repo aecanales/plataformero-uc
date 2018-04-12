@@ -1,17 +1,27 @@
 # plataformero-uc
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 [**Tareas por hacer en tablero de Trello.**](https://trello.com/b/zeNLVvkR)
 
 =======
 >>>>>>> Finished horizontal movement and jumping.
+=======
+=======
+[**Tareas por hacer en tablero de Trello.**](https://trello.com/b/zeNLVvkR)
+
+>>>>>>> fdb0c3f076e542db8344103a71ae92e2c51741fd
+>>>>>>> Blocks Update, forgot to push
 ## Resumen del juego
 
 Este plataformero cuenta la historia de un **novato perdido y atrasado** para su primera prueba. Deberá atravesar el Campus San Joaquín para llega su sala a tiempo, evitando enemigos como ayudantes (*goombas*) y profesores (*koopa*) malvados mientras recoge monedas por el campus. Puede encontrar varios power-ups, como pizza (*champiñon normal*), café (*1UP*) o apuntes perfectos del ramo (*starman*). 
 
 En término de mecánicas, el objetivo incial es crear un clon de [Super Mario Bros. (NES)](https://www.youtube.com/watch?v=PsC0zIhWNww), pero si nos va bien podemos agregarle más mecánicas y objetos y niveles.
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> Blocks Update, forgot to push
 
 ## Tareas para la semana
 
@@ -49,4 +59,9 @@ Hay que programar los distintos items que uno puede coleccionar en el juego:
 
 #### Crear un loop para el gameplay principal
 Estoy abierto a sugerencias para el estilo de música!
+<<<<<<< HEAD
 >>>>>>> Finished horizontal movement and jumping.
+=======
+=======
+>>>>>>> fdb0c3f076e542db8344103a71ae92e2c51741fd
+>>>>>>> Blocks Update, forgot to push
