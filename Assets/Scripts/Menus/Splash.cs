@@ -51,4 +51,9 @@ public class Splash : MonoBehaviour {
         fadeState = 2;
     }
 
+    private void OnMouseDown()
+    {
+        Application.OpenURL("https://www.gamedevcomuc.com/");
+    }
+
 }
