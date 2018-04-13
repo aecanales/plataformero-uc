@@ -1,1 +1,12 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
 m_EditorVersion: 2017.4.0f1
+=======
+m_EditorVersion: 2017.3.0f3
+>>>>>>> Finished horizontal movement and jumping.
+=======
+m_EditorVersion: 2017.3.0f3
+=======
+m_EditorVersion: 2017.4.0f1
+>>>>>>> fdb0c3f076e542db8344103a71ae92e2c51741fd
+>>>>>>> Blocks Update, forgot to push
