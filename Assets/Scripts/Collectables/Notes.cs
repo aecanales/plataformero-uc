@@ -21,9 +21,8 @@ public class Notes : Collectable {
     }
     protected override void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag(triggerBy))
-        {
-            // Do something
+        if (collision.gameObject.CompareTag(triggerBy)) {
+            collision.gameObject.SendMessage("ActivateAbility", 5.0f);
         }
         base.OnTriggerEnter2D(collision);
     }
