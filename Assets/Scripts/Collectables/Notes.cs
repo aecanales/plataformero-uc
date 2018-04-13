@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Notes : Collectable {
-
+    public float time = 5.0f;
     public Notes()
     {
 
@@ -22,7 +22,7 @@ public class Notes : Collectable {
     protected override void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag(triggerBy)) {
-            collision.gameObject.SendMessage("ActivateAbility", 5.0f);
+            collision.gameObject.SendMessage("ActivateAbility", time);
         }
         base.OnTriggerEnter2D(collision);
     }
