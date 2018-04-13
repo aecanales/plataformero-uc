@@ -296,7 +296,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0358d061e9a8b2b438ff5021da8fb3a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MainMenuScene: 
+  MainMenuScene: Menu
 --- !u!212 &2078692881
 SpriteRenderer:
   m_ObjectHideFlags: 0
