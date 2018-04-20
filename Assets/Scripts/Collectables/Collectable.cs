@@ -13,9 +13,6 @@ public class Collectable : MonoBehaviour {
 
     // Use this for initialization
     protected virtual void Start () {
-        yMovement.y += transform.position.y;
-        yMovement.x += transform.position.x;
-
         //yMovement.y += transform.position.y;
         //yMovement.x += transform.position.x;
 		
@@ -24,13 +21,11 @@ public class Collectable : MonoBehaviour {
     // Update is called once per frame
     protected virtual void Update() {
 
-        yMovement.y += maxRange / 2 * Mathf.Sin(velocidad*Time.time);
         //yMovement.y += maxRange / 2 * Mathf.Sin(velocidad*Time.time);
     }
 
     protected virtual void FixedUpdate()
     {
-        transform.position = yMovement * Time.fixedDeltaTime;
         //transform.position = yMovement * Time.fixedDeltaTime;
     }
 
