@@ -6,6 +6,7 @@ public class Doggo : MonoBehaviour {
 
     public GameObject message;
 
+
 	// Use this for initialization
 	void Start () {
 
@@ -16,7 +17,7 @@ public class Doggo : MonoBehaviour {
 
 	}
 
-    private void OnTriggerStay2D(Collider2D collision)
+    private IEnumerator OnTriggerStay2D(Collider2D collision) //cambiar voit por IEnumerator permite iterar para que pasen 5 segundos
     {
         Debug.Log("Se activó onTriggerStay2D");
 
@@ -27,6 +28,10 @@ public class Doggo : MonoBehaviour {
             {
                 Debug.Log("El jugador apretó F");
                 message.SetActive(true);
+                yield return new WaitForSeconds(5); // funcion que detecta el paso del tiempo
+                message.SetActive(false);
+                Debug.Log("Pasan 5 segundos");
+
             }
         }
     }
