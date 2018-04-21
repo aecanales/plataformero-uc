@@ -5,6 +5,7 @@ using UnityEngine;
 public class Doggo : MonoBehaviour {
 
     public GameObject message;
+    public GameObject pressf;
 
 
 	// Use this for initialization
@@ -24,8 +25,12 @@ public class Doggo : MonoBehaviour {
         if (collision.CompareTag("Player"))
         {
             Debug.Log("Es el player :o");
+            pressf.SetActive(true);
+            yield return new WaitForSeconds(2);
+            pressf.SetActive(false);
             if (Input.GetKeyDown(KeyCode.F))
             {
+                pressf.SetActive(false);
                 Debug.Log("El jugador apretó F");
                 message.SetActive(true);
                 yield return new WaitForSeconds(5); // funcion que detecta el paso del tiempo
