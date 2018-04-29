@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Camera : MonoBehaviour {
 
-    public string player_tag = "player";
+    public string player_tag = "Player";
     private GameObject[] players;
     private GameObject player;
 
