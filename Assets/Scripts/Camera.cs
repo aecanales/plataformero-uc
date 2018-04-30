@@ -19,7 +19,7 @@ public class Camera : MonoBehaviour {
         players = GameObject.FindGameObjectsWithTag(player_tag);
     }
 
-    private void FixedUpdate()
+    private void LateUpdate()
     {
         Vector3 next = new Vector3(player.transform.position.x, transform.position.y, transform.position.z);
         transform.position = next;
