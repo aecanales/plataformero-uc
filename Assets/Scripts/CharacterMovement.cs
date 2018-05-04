@@ -15,15 +15,16 @@ public class CharacterMovement : MonoBehaviour {
     public GameObject groundCheck;
     private Rigidbody2D rigidBody;
 
-
     bool inGround = false;
     bool jump = false;
+
+    Animator anim;
 
 
     // Use this for initialization
     void Start() {
         rigidBody = GetComponent<Rigidbody2D>();
-
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -31,6 +32,7 @@ public class CharacterMovement : MonoBehaviour {
         if(inGround && Input.GetButtonDown("Jump")){
             jump = true;
         }
+        HandleFlip();
     }
 
     void FixedUpdate(){
@@ -40,7 +42,8 @@ public class CharacterMovement : MonoBehaviour {
 
     public void OnCollisionEnter2D(Collision2D collision){
         if (collision.collider.gameObject.tag.Equals("Ground")){
-            inGround = true;   
+            inGround = true;
+            anim.SetBool("Jumped", false);
         }
     }
 
@@ -48,6 +51,7 @@ public class CharacterMovement : MonoBehaviour {
         if (jump){
             rigidBody.AddForce(Vector2.up*jumpForce);
             Debug.Log("Jumping");
+            anim.SetBool("Jumped", true);
             jump = false;
             inGround = false;
         }
@@ -55,6 +59,7 @@ public class CharacterMovement : MonoBehaviour {
 
     void Move() {
         float xMove = Input.GetAxis("Horizontal");
+        anim.SetBool("IsMoving", xMove != 00);
         if(xMove == 0){
             rigidBody.velocity = new Vector2(0,rigidBody.velocity.y);
             return;
@@ -66,5 +71,16 @@ public class CharacterMovement : MonoBehaviour {
             rigidBody.velocity = new Vector2(Mathf.Sign(rigidBody.velocity.x) * MAX_SPEED, rigidBody.velocity.y);
         }
         speed = rigidBody.velocity.magnitude;
+    }
+
+    void HandleFlip() {
+        float xAxis = Input.GetAxis("Horizontal");
+        if ((xAxis < 0 && gameObject.transform.localScale.x > 0) | (xAxis > 0 && gameObject.transform.localScale.x < 0))
+        {
+            gameObject.transform.localScale = new Vector3
+                (-gameObject.transform.localScale.x, 
+                gameObject.transform.localScale.y,
+                gameObject.transform.localScale.z);
+        }
     }
 }
