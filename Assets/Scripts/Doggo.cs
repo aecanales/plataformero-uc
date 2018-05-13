@@ -10,6 +10,7 @@ public class Doggo : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+    pressf.SetActive(true);
 
 	}
 
@@ -18,16 +19,15 @@ public class Doggo : MonoBehaviour {
 
 	}
 
-    private IEnumerator OnTriggerStay2D(Collider2D collision) //cambiar voit por IEnumerator permite iterar para que pasen 5 segundos
+
+    private IEnumerator OnTriggerStay2D(Collider2D collision) //cambiar void por IEnumerator permite iterar para que pasen 5 segundos
     {
         Debug.Log("Se activó onTriggerStay2D");
 
         if (collision.CompareTag("Player"))
         {
             Debug.Log("Es el player :o");
-            pressf.SetActive(true);
-            yield return new WaitForSeconds(2);
-            pressf.SetActive(false);
+
             if (Input.GetKeyDown(KeyCode.F))
             {
                 pressf.SetActive(false);
@@ -35,6 +35,7 @@ public class Doggo : MonoBehaviour {
                 message.SetActive(true);
                 yield return new WaitForSeconds(5); // funcion que detecta el paso del tiempo
                 message.SetActive(false);
+                pressf.SetActive(true);
                 Debug.Log("Pasan 5 segundos");
 
             }
