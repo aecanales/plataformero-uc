@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(Collider2D))]
 public class CharacterMovement : MonoBehaviour {
@@ -49,7 +48,7 @@ public class CharacterMovement : MonoBehaviour {
 
     private void Jump(){
         if (jump){
-            rigidBody.AddForce(Vector2.up*jumpForce);
+            rigidBody.AddForce(Vector2.up * jumpForce);
             Debug.Log("Jumping");
             anim.SetBool("Jumped", true);
             jump = false;
@@ -70,7 +69,7 @@ public class CharacterMovement : MonoBehaviour {
         if (speed > MAX_SPEED){
             rigidBody.velocity = new Vector2(Mathf.Sign(rigidBody.velocity.x) * MAX_SPEED, rigidBody.velocity.y);
         }
-        speed = rigidBody.velocity.magnitude;
+        speed = Mathf.Abs(rigidBody.velocity.x);
     }
 
     void HandleFlip() {
