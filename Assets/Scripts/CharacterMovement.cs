@@ -56,6 +56,13 @@ public class CharacterMovement : MonoBehaviour {
         }
     }
 
+    public void ForceJump(float modifier) {
+        rigidBody.AddForce(Vector2.up * jumpForce * modifier);
+        Debug.Log("Force Jump");
+        jump = false;
+        inGround = false;
+    }
+
     void Move() {
         float xMove = Input.GetAxis("Horizontal");
         anim.SetBool("IsMoving", xMove != 00);
