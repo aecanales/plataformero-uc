@@ -8,6 +8,8 @@ public class Camera : MonoBehaviour {
     private GameObject[] players;
     private GameObject player;
 
+    public float freeMove = 1; //How much the player can move "freely".
+
     // Use this for initialization
     void Start () {
         players = GameObject.FindGameObjectsWithTag(player_tag);
@@ -21,8 +23,18 @@ public class Camera : MonoBehaviour {
 
     private void LateUpdate()
     {
-        Vector3 next = new Vector3(player.transform.position.x, transform.position.y, transform.position.z);
-        transform.position = next;
+        float difference = player.transform.position.x - transform.position.x;
+        if (Mathf.Abs(difference) > freeMove) {
+            if (player.GetComponent<Rigidbody2D>().velocity.x > 0 && difference>0)
+            {
+                Vector3 next = new Vector3(player.transform.position.x - freeMove, transform.position.y, transform.position.z);
+                transform.position = next;
+            } else if (player.GetComponent<Rigidbody2D>().velocity.x < 0 && difference < 0){
+                Vector3 next = new Vector3(player.transform.position.x + freeMove, transform.position.y, transform.position.z);
+                transform.position = next;
+
+            }
+        }
     }
 
     public void ChangePlayer(int n) {
