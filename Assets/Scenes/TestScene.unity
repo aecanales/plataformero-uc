@@ -463,7 +463,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -503,7 +503,7 @@ GameObject:
   - component: {fileID: 742709460}
   m_Layer: 0
   m_Name: Notes Block
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -729,7 +729,7 @@ GameObject:
   - component: {fileID: 904711449}
   m_Layer: 0
   m_Name: Coin Block
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1046,7 +1046,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1542,7 +1542,7 @@ GameObject:
   - component: {fileID: 1452504340}
   m_Layer: 0
   m_Name: Breakable Block
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1653,6 +1653,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1515797586}
   - component: {fileID: 1515797587}
+  - component: {fileID: 1515797588}
   m_Layer: 0
   m_Name: BG Objects
   m_TagString: Untagged
@@ -1692,6 +1693,18 @@ MonoBehaviour:
   StartingPosition: {x: -31, y: 5.2, z: 2}
   NumberOfSkies: 5
   TileWidth: 19
+--- !u!114 &1515797588
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1515797585}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a8b31e1301a1d8499e87b1a2d9a079e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  smoothing: 1
 --- !u!1 &1747496225
 GameObject:
   m_ObjectHideFlags: 0
