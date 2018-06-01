@@ -8,8 +8,9 @@ public class EnemyStomp : MonoBehaviour {
         string colliderTag = collision.collider.gameObject.tag;
         if (colliderTag.Equals("Enemy"))
         {
-            if (collision.collider.bounds.max.y < gameObject.transform.position.y)
-            { //We're falling!{
+            if (collision.collider.bounds.max.y - 0.1 < GetComponent<Collider2D>().bounds.min.y)
+            { 
+                //We're falling!
                 print(GetComponent<Rigidbody2D>().velocity.y);
                 Destroy(collision.collider.gameObject);
                 GetComponent<CharacterMovement>().ForceJump(0.5f);
