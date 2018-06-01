@@ -37,10 +37,13 @@ public class CharacterMovement : MonoBehaviour {
     void FixedUpdate(){
         Move();
         Jump();
+        if (rigidBody.velocity.y < 0)  // If player is falling...
+            anim.SetBool("Jumped", true);
     }
 
     public void OnCollisionEnter2D(Collision2D collision){
-        if (collision.collider.gameObject.tag.Equals("Ground")){
+        if (collision.collider.gameObject.tag.Equals("Ground") && 
+            collision.collider.transform.position.y < transform.position.y){
             inGround = true;
             anim.SetBool("Jumped", false);
         }
@@ -59,6 +62,7 @@ public class CharacterMovement : MonoBehaviour {
     public void ForceJump(float modifier) {
         rigidBody.AddForce(Vector2.up * jumpForce * modifier);
         Debug.Log("Force Jump");
+        anim.SetBool("Jumped", true);
         jump = false;
         inGround = false;
     }
