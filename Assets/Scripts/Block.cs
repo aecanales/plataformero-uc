@@ -31,8 +31,9 @@ public class Block : MonoBehaviour {
                         Destroy(gameObject);
                         break;
                     case BlockType.Item:
+                        Vector3 new_position = new Vector3(transform.position.x, transform.position.y + 1.5f, transform.position.z);
                         prizeObject.PlaySound(gameObject.transform.position);
-                        Collectable item = Instantiate(prizeObject);
+                        Collectable item = Instantiate(prizeObject, new_position, Quaternion.identity);
                         hit = true;
                         break;
                 }
