@@ -20,12 +20,12 @@ public class Pizza : Collectable{
         base.Update();
 
     }
-    protected override void OnTriggerEnter2D(Collider2D collision)
+    protected override void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag(triggerBy))
         {
             // Do something
         }
-        base.OnTriggerEnter2D(collision);
+        base.OnCollisionEnter2D(collision);
     }
 }

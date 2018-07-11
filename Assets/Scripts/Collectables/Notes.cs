@@ -19,11 +19,11 @@ public class Notes : Collectable {
         base.Update();
 
     }
-    protected override void OnTriggerEnter2D(Collider2D collision)
+    protected override void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag(triggerBy)) {
             collision.gameObject.SendMessage("ActivateAbility", time);
         }
-        base.OnTriggerEnter2D(collision);
+        base.OnCollisionEnter2D(collision);
     }
 }

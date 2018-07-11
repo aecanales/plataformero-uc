@@ -7,32 +7,28 @@ public class Collectable : MonoBehaviour {
     public AudioClip retrieveSound;
 
     public string triggerBy = "Player";
-    public float maxRange = 100;
-    public float velocidad = 10;
-    private Vector2 yMovement = new Vector2(0, 0);
+    public Vector2 SpawnForce = new Vector2(120, 250);
 
     // Use this for initialization
     protected virtual void Start () {
-        //yMovement.y += transform.position.y;
-        //yMovement.x += transform.position.x;
-		
-	}
+        if (Random.value < 0.5f)
+            GetComponent<Rigidbody2D>().AddForce(SpawnForce);
+        else
+            GetComponent<Rigidbody2D>().AddForce(new Vector2(-SpawnForce.x, SpawnForce.y));
+    }
 
     // Update is called once per frame
-    protected virtual void Update() {
-
-        //yMovement.y += maxRange / 2 * Mathf.Sin(velocidad*Time.time);
-    }
+    protected virtual void Update()
+    { }
 
     protected virtual void FixedUpdate()
-    {
-        //transform.position = yMovement * Time.fixedDeltaTime;
-    }
+    { }
 
-    protected virtual void OnTriggerEnter2D(Collider2D collision)
+    protected virtual void OnCollisionEnter2D(Collision2D collision)
     {
         Debug.Log("collision");
         if (collision.gameObject.CompareTag(triggerBy)) {
+            Debug.Log(gameObject.name + " collided with player.");
             Destroy(gameObject);
         }
     }
