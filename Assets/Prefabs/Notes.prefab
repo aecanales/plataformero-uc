@@ -102,7 +102,7 @@ MonoBehaviour:
   retrieveSound: {fileID: 0}
   triggerBy: Player
   SpawnForce: {x: 120, y: 250}
-  time: 5
+  time: 10
 --- !u!212 &212399355167525958
 SpriteRenderer:
   m_ObjectHideFlags: 1
