@@ -61,7 +61,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!58 &58276313849799714
 CircleCollider2D:
@@ -91,6 +91,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   retrieveSound: {fileID: 0}
   triggerBy: Player
+  SpawnForce: {x: 120, y: 250}
   Amount: 10
 --- !u!212 &212848647111161850
 SpriteRenderer:
