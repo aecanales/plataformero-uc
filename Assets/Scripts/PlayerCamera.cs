@@ -40,7 +40,7 @@ public class PlayerCamera : MonoBehaviour {
     private void LateUpdate()
     {
         float difference = player.transform.position.x - transform.position.x;
-        if (Mathf.Abs(difference) > freeMove) {
+        if (Mathf.Abs(difference) > freeMove && transform.position.y <= cameraY) {
             if (player.GetComponent<Rigidbody2D>().velocity.x > 0 && difference>0)
             {
                 Vector3 next = new Vector3(player.transform.position.x - freeMove, transform.position.y, transform.position.z);
