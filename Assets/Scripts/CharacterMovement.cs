@@ -37,7 +37,7 @@ public class CharacterMovement : MonoBehaviour {
     void FixedUpdate(){
         Move();
         Jump();
-        if (rigidBody.velocity.y < 0)  // If player is falling...
+        if (rigidBody.velocity.y < -0.5f) // If player is falling...
             anim.SetBool("Jumped", true);
     }
 
