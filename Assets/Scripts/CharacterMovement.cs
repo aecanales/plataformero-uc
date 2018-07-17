@@ -43,7 +43,8 @@ public class CharacterMovement : MonoBehaviour {
 
     public void OnCollisionEnter2D(Collision2D collision){
         if (collision.collider.gameObject.tag.Equals("Ground") && 
-            collision.collider.transform.position.y < transform.position.y){
+            collision.collider.bounds.max.y - 0.1 < GetComponent<Collider2D>().bounds.min.y)
+        {
             inGround = true;
             anim.SetBool("Jumped", false);
         }
