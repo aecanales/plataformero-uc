@@ -8,7 +8,22 @@ using UnityEngine;
 namespace Assets.Scripts.Collectables.Abilities {
     class NotesAbility : MonoBehaviour {
         private bool abilityActive;
+        private SpriteRenderer myRenderer;
 
+        private void Start()
+        {
+            myRenderer = GetComponent<SpriteRenderer>();
+        }
+
+        private void Update()
+        {
+            if (abilityActive)
+            {
+                myRenderer.enabled = !myRenderer.enabled;
+            }
+            else
+                myRenderer.enabled = true;
+        }
 
         private void OnCollisionEnter2D(Collision2D collision) {
             if (abilityActive)
