@@ -8,6 +8,7 @@ public class Block : MonoBehaviour {
     public Collectable prizeObject; //Objeto que será entregado al jugador.
     public AudioClip hitSound;
     public BlockType type = BlockType.Breakable;
+    public Sprite newBlock; // Block sprite after being hit, only for item blocks.
     private bool hit = false;
 
 	// Use this for initialization
@@ -35,6 +36,7 @@ public class Block : MonoBehaviour {
                         prizeObject.PlaySound(gameObject.transform.position);
                         Collectable item = Instantiate(prizeObject, new_position, Quaternion.identity);
                         hit = true;
+                        GetComponent<SpriteRenderer>().sprite = newBlock;
                         break;
                 }
             }
