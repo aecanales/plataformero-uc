@@ -460,6 +460,7 @@ GameObject:
   - component: {fileID: 218810356}
   - component: {fileID: 218810355}
   - component: {fileID: 218810357}
+  - component: {fileID: 218810358}
   m_Layer: 0
   m_Name: Enemy 2 (4)
   m_TagString: Enemy
@@ -560,6 +561,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e15bc8c155373c44b526d57c8819628, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  horizontalMovement: 1
+  speed: 2
+--- !u!95 &218810358
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 218810353}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: fdbdf99cb07ee954c8475c50f147e336, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &301984451
 GameObject:
   m_ObjectHideFlags: 0
@@ -1126,6 +1146,7 @@ GameObject:
   - component: {fileID: 505137510}
   - component: {fileID: 505137509}
   - component: {fileID: 505137512}
+  - component: {fileID: 505137513}
   m_Layer: 0
   m_Name: Enemy 1
   m_TagString: Enemy
@@ -1226,6 +1247,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e15bc8c155373c44b526d57c8819628, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  horizontalMovement: 1
+  speed: 2
+--- !u!95 &505137513
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 505137508}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2bc0b99e47f06354c86aa0ecec160835, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &516595068
 GameObject:
   m_ObjectHideFlags: 0
@@ -3054,6 +3094,7 @@ GameObject:
   - component: {fileID: 1088266538}
   - component: {fileID: 1088266537}
   - component: {fileID: 1088266539}
+  - component: {fileID: 1088266540}
   m_Layer: 0
   m_Name: Enemy 2
   m_TagString: Enemy
@@ -3154,6 +3195,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e15bc8c155373c44b526d57c8819628, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  horizontalMovement: 1
+  speed: 2
+--- !u!95 &1088266540
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1088266535}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: fdbdf99cb07ee954c8475c50f147e336, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &1230053851
 GameObject:
   m_ObjectHideFlags: 0
@@ -3165,6 +3225,7 @@ GameObject:
   - component: {fileID: 1230053854}
   - component: {fileID: 1230053853}
   - component: {fileID: 1230053855}
+  - component: {fileID: 1230053856}
   m_Layer: 0
   m_Name: Enemy 2 (3)
   m_TagString: Enemy
@@ -3265,6 +3326,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e15bc8c155373c44b526d57c8819628, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  horizontalMovement: 1
+  speed: 2
+--- !u!95 &1230053856
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1230053851}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2bc0b99e47f06354c86aa0ecec160835, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &1308760212
 GameObject:
   m_ObjectHideFlags: 0
@@ -4811,6 +4891,7 @@ GameObject:
   - component: {fileID: 1788201960}
   - component: {fileID: 1788201959}
   - component: {fileID: 1788201961}
+  - component: {fileID: 1788201962}
   m_Layer: 0
   m_Name: Enemy 2 (2)
   m_TagString: Enemy
@@ -4911,6 +4992,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e15bc8c155373c44b526d57c8819628, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  horizontalMovement: 1
+  speed: 2
+--- !u!95 &1788201962
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1788201957}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: fdbdf99cb07ee954c8475c50f147e336, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &1838142810
 GameObject:
   m_ObjectHideFlags: 0
@@ -5366,6 +5466,7 @@ GameObject:
   - component: {fileID: 2058532149}
   - component: {fileID: 2058532148}
   - component: {fileID: 2058532150}
+  - component: {fileID: 2058532151}
   m_Layer: 0
   m_Name: Enemy 2 (1)
   m_TagString: Enemy
@@ -5466,6 +5567,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e15bc8c155373c44b526d57c8819628, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  horizontalMovement: 1
+  speed: 2
+--- !u!95 &2058532151
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2058532146}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2bc0b99e47f06354c86aa0ecec160835, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &2058948958
 GameObject:
   m_ObjectHideFlags: 0
