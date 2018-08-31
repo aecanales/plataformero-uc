@@ -1,7 +1,5 @@
 # plataformero-uc
 
-[**Tareas por hacer en tablero de Trello.**](https://trello.com/b/zeNLVvkR)
-
 ## Resumen del juego
 
 Este plataformero cuenta la historia de un **novato perdido y atrasado** para su primera prueba. Deberá atravesar el Campus San Joaquín para llega su sala a tiempo, evitando enemigos como ayudantes (*goombas*) y profesores (*koopa*) malvados mientras recoge monedas por el campus. Puede encontrar varios power-ups, como pizza (*champiñon normal*), café (*1UP*) o apuntes perfectos del ramo (*starman*). 
