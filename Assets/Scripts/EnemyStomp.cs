@@ -9,10 +9,9 @@ public class EnemyStomp : MonoBehaviour {
         if (colliderTag.Equals("Enemy"))
         {
             if (collision.collider.bounds.max.y - 0.1 < GetComponent<Collider2D>().bounds.min.y)
-            { 
+            {
                 //We're falling!
-                print(GetComponent<Rigidbody2D>().velocity.y);
-                Destroy(collision.collider.gameObject);
+                collision.collider.gameObject.SendMessage("Die");            
                 GetComponent<CharacterMovement>().ForceJump(0.5f);
             }
         }

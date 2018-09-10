@@ -30,7 +30,7 @@ namespace Assets.Scripts.Collectables.Abilities {
             {
                 if (collision.collider.tag == "Enemy")
                 {
-                    Destroy(collision.collider.gameObject);
+                    collision.collider.gameObject.SendMessage("Die");
                 }
             }
         }
