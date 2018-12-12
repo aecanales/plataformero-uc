@@ -57,6 +57,7 @@ public class EvilTeacher : MonoBehaviour {
         GetComponent<BoxCollider2D>().enabled = false;
         dead = true;
         anim.SetBool("dead", true);
+        GetComponent<AudioSource>().Play();
         InvokeRepeating("Mirror", 0, 0.25f);
     }
 
