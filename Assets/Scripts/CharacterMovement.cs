@@ -7,9 +7,15 @@ using UnityEngine;
 [RequireComponent(typeof(Collider2D))]
 public class CharacterMovement : MonoBehaviour {
     private float speed = 0f;
+
     public float acceleration = 20f;
     public float MAX_SPEED = 5f; //Constant
     public float jumpForce = 500f;
+
+    private AudioSource source;
+    public AudioClip SFX_Running;
+    public AudioClip SFX_Jump;
+    public AudioClip SFX_Land;
 
     public GameObject groundCheck;
     private Rigidbody2D rigidBody;
@@ -22,6 +28,7 @@ public class CharacterMovement : MonoBehaviour {
 
     // Use this for initialization
     void Start() {
+        source = GetComponent<AudioSource>();
         rigidBody = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
     }
@@ -47,6 +54,8 @@ public class CharacterMovement : MonoBehaviour {
         {
             inGround = true;
             anim.SetBool("Jumped", false);
+            source.clip = SFX_Land;
+            source.Play();
         }
     }
 
@@ -57,6 +66,8 @@ public class CharacterMovement : MonoBehaviour {
             anim.SetBool("Jumped", true);
             jump = false;
             inGround = false;
+            source.clip = SFX_Jump;
+            source.Play();
         }
     }
 
@@ -71,10 +82,26 @@ public class CharacterMovement : MonoBehaviour {
     void Move() {
         float xMove = Input.GetAxis("Horizontal");
         anim.SetBool("IsMoving", xMove != 00);
-        if(xMove == 0){
-            rigidBody.velocity = new Vector2(0,rigidBody.velocity.y);
+
+        if (xMove == 0)
+        {
+            rigidBody.velocity = new Vector2(0, rigidBody.velocity.y);
+
+            if (source.clip == SFX_Running)
+                source.Stop();
+
             return;
         }
+        else if (!source.isPlaying) {
+            if (inGround)
+            {
+                source.clip = SFX_Running;
+                source.Play();
+            }
+            else
+                source.Stop();
+        }
+
         if (speed < MAX_SPEED){
             rigidBody.AddForce(Vector2.right * xMove * acceleration);
         }
