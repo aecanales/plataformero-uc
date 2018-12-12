@@ -6,7 +6,6 @@ using UnityEngine;
 [RequireComponent(typeof(BoxCollider))]
 public class Block : MonoBehaviour {
     public Collectable prizeObject; //Objeto que será entregado al jugador.
-    public AudioClip hitSound;
     public BlockType type = BlockType.Breakable;
     public Sprite newBlock; // Block sprite after being hit, only for item blocks.
     private bool hit = false;
@@ -26,10 +25,9 @@ public class Block : MonoBehaviour {
             if (collision.collider.bounds.max.y < gameObject.transform.position.y) { //check if below player   
                 switch (type) {
                     case BlockType.Breakable:
-                        if (hitSound != null){
-                            AudioSource.PlayClipAtPoint(hitSound, gameObject.transform.position);
-                        }
-                        Destroy(gameObject);
+                        GetComponent<AudioSource>().Play();
+                        GetComponent<SpriteRenderer>().enabled = false;
+                        Destroy(gameObject, 0.5f);
                         break;
                     case BlockType.Item:
                         Vector3 new_position = new Vector3(transform.position.x, transform.position.y + 1.5f, transform.position.z);

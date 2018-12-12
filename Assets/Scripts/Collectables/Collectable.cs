@@ -29,6 +29,7 @@ public class Collectable : MonoBehaviour {
         Debug.Log("collision");
         if (collision.gameObject.CompareTag(triggerBy)) {
             Debug.Log(gameObject.name + " collided with player.");
+            PlaySound(transform.position);
             Destroy(gameObject);
         }
     }
