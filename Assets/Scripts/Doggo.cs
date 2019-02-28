@@ -6,12 +6,12 @@ public class Doggo : MonoBehaviour {
 
     public GameObject message;
     public GameObject pressf;
-
+    private Animator anim;
 
 	// Use this for initialization
 	void Start () {
-    pressf.SetActive(true);
-
+        pressf.SetActive(true);
+        anim = GetComponent<Animator>();
 	}
 
 	// Update is called once per frame
@@ -33,9 +33,11 @@ public class Doggo : MonoBehaviour {
                 pressf.SetActive(false);
                 Debug.Log("El jugador apretó F");
                 message.SetActive(true);
+                anim.SetBool("speaking", true);
                 yield return new WaitForSeconds(5); // funcion que detecta el paso del tiempo
                 message.SetActive(false);
                 pressf.SetActive(true);
+                anim.SetBool("speaking", false);
                 Debug.Log("Pasan 5 segundos");
 
             }
