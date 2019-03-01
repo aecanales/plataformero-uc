@@ -1904,6 +1904,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   message: {fileID: 691745427}
   pressf: {fileID: 986591749}
+  FinalScene: Final
 --- !u!95 &535037117
 Animator:
   serializedVersion: 3
