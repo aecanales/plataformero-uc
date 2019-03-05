@@ -11,11 +11,15 @@ public class CharacterSwitcher : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
-	}
+		if (Gender.Sex == "male")
+            GetComponent<Animator>().runtimeAnimatorController = maleAnimations;
+        else
+            GetComponent<Animator>().runtimeAnimatorController = femaleAnimations;
+    }
 	
 	// Update is called once per frame
 	void Update () {
+        /* For testing
         if (Input.GetKeyDown(KeyCode.Q)) {
             if (isFemale)
                 GetComponent<Animator>().runtimeAnimatorController = maleAnimations;
@@ -23,6 +27,6 @@ public class CharacterSwitcher : MonoBehaviour {
                 GetComponent<Animator>().runtimeAnimatorController = femaleAnimations;
             isFemale = !isFemale;
         }
-		
+		*/
 	}
 }
